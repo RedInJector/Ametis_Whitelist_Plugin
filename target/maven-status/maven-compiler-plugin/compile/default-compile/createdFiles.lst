@@ -1,0 +1,5 @@
+org\rij\minecraft\bukkit\ametis\SparkWebServer.class
+org\rij\minecraft\bukkit\ametis\EventListeners\EventListener.class
+org\rij\minecraft\bukkit\ametis\AmeWL.class
+org\rij\minecraft\bukkit\ametis\Commands\AmeWhitelist.class
+org\rij\minecraft\bukkit\ametis\EventListeners\RegisterUserListener.class

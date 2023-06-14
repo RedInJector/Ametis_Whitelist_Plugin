@@ -1,0 +1,11 @@
+name: AmeWL
+version: '${project.version}'
+main: org.rij.minecraft.bukkit.ametis.AmeWL
+api-version: 1.19
+author: RedInJector
+
+commands:
+  amewhitelist:
+    description: Your description
+    usage: /amewhitelist [add | remove] [player name]
+    permission: AmeWL.ameWLpermission

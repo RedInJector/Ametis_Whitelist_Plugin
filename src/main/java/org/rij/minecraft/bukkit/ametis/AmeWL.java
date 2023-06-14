@@ -28,7 +28,7 @@ public final class AmeWL extends JavaPlugin {
 
         AmeWhitelist cmd1 = new AmeWhitelist(this, storage);
         Objects.requireNonNull(getCommand("amewhitelist")).setExecutor(cmd1);
-        getCommand("amewhitelist").setTabCompleter(cmd1);
+        Objects.requireNonNull(getCommand("amewhitelist")).setTabCompleter(cmd1);
 
 
 

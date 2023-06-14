@@ -36,10 +36,7 @@ public class Storage {
         p.reloadConfig();
     }
     public boolean isWhitelisted(String name){
-        if(WhiteList.contains(name))
-            return true;
-
-        return false;
+        return WhiteList.contains(name);
     }
 
     public void loadWhitelist(){

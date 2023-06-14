@@ -1,8 +1,6 @@
 kick_message: "You have no right to be here!"
 
-success_message: "Success"
+success_message: "Success!"
 already_whitelisted: "Already whitelisted"
 no_arguments_error: "Not enough arguments!"
 too_many_error: "To many arguments!"
-
-API_Key: "GSJHnxExf8fd5pvXy868CW17vOpxNibJf80mDF0KHWAcLU5THMk1BBbEjxy0Jvco"

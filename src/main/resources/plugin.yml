@@ -3,6 +3,8 @@ version: '${project.version}'
 main: org.rij.minecraft.bukkit.ametis.AmeWL
 api-version: 1.19
 author: RedInJector
+load: STARTUP
+softdepend: [AmetisAPI]
 
 commands:
   amewhitelist:

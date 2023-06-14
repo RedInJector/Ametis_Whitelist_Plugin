@@ -5,6 +5,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.Command;
 import org.bukkit.command.TabCompleter;
 import org.rij.minecraft.bukkit.ametis.AmeWL;
+import org.rij.minecraft.bukkit.ametis.Storage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +13,11 @@ import java.util.List;
 public class AmeWhitelist implements CommandExecutor, TabCompleter {
 
     private final AmeWL p;
+    private final Storage storage;
 
-    public AmeWhitelist(AmeWL plugin) {
+    public AmeWhitelist(AmeWL plugin, Storage storage) {
         this.p = plugin;
+        this.storage = storage;
     }
 
     @Override
@@ -23,30 +26,30 @@ public class AmeWhitelist implements CommandExecutor, TabCompleter {
             return false;
 
         if(args.length == 1 && args[0].equals("reload")){
-            p.reloadWhitelist();
+            storage.reloadWhitelist();
             sender.sendMessage(p.getConfigString("success_message!"));
             return true;
         }
 
         if(args.length == 2){
             String playerName = args[1];
-            if(p.isWhitelisted(playerName)){
+            if(storage.isWhitelisted(playerName)){
                 sender.sendMessage(p.getConfigString("already_whitelisted"));
                 return true;
             }
 
             switch (args[0].toLowerCase()) {
                 case "add":
-                    p.addToWhitelist(playerName);
+                    storage.addToWhitelist(playerName);
                     break;
                 case "remove":
-                    p.removeFromWhitelist(playerName);
+                    storage.removeFromWhitelist(playerName);
                     break;
                 default:
                     sender.sendMessage(p.getConfigString("no_arguments_error"));
                     return false;
             }
-            sender.sendMessage(p.getConfigString("success_message!"));
+            sender.sendMessage(p.getConfigString("success_message"));
             return true;
         }
 
